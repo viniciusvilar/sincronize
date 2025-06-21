@@ -91,8 +91,6 @@ export class ProductService {
     },
   ];
 
-  console.log(payload)
-
   try {
     const response = await firstValueFrom(
       this.httpService.post(this.API_URL, payload, {
@@ -104,7 +102,7 @@ export class ProductService {
     );
 
     console.log(`Produto enviado com sucesso (SKU: ${payload[0].produto.sku})`);
-    console.log('Resposta da API:', response.data); // <- Aqui mostra todo o retorno da API
+    console.log('Resposta da API:', response.data);
   } catch (error) {
     console.error(`Erro ao enviar produto SKU ${payload[0].produto.sku}:`, error?.response?.data || error.message);
   }
