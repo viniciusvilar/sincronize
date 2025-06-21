@@ -2,7 +2,7 @@ import { Provider } from '@nestjs/common';
 import * as Firebird from 'node-firebird';
 
 const options: Firebird.Options = {
-  host: 'localhost',
+  host: '127.0.0.1',
   port: 3050,
   database: 'C:/gensis/market.gdb',
   user: 'SYSDBA',
